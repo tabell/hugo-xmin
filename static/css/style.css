@@ -1,8 +1,17 @@
+:root {
+    --main-bg-color: #211f18;
+    --light-text-color: #e6bd57;
+    --main-text-color: #cfceb5;
+    --light-bg-color: #625134;
+    --contrast-color: #282c43;
+}
 body {
   max-width: 800px;
   margin: auto;
   padding: 1em;
   line-height: 1.5em;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 /* header and footer areas */
@@ -10,27 +19,29 @@ body {
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
-  background: #eee;
+  background: main-bg-color;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
 footer a { text-decoration: none; }
 hr {
   border-style: dashed;
-  color: #ddd;
+  color: var(--light-bg-color);
 }
 
 /* code */
 pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
+  border: 1px solid var(--light-bg-color);
   padding: 1em;
   overflow-x: auto;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
+pre code {
+    font-family: "Deja Vu Sans Mono";
+    font-family: "monospace";
+    color: var(--light-text-color);
+}
 
 /* misc elements */
 img, iframe, video { max-width: 100%; }
@@ -49,3 +60,21 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+a {
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    line-height: 1em;
+    max-width: 70%;
+    color: var(--light-text-color);
+  }
